@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #2874f0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1a5fd0;
+}
+
+.secondary {
+    width: auto;
+    padding: 10px 20px;
+}
+
+.center {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* .response-card {
+    max-width: 900px;
+    margin: 20px auto;
+} */
+
+.response-card {
+    width: 100%;
+    max-width: 1200px;   /* IMPORTANT */
+    margin: 20px auto;
+}
+
+
+#productContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* FORCE 3 in a row */
+    gap: 20px;
+}
+
+
+/* Product card (Flipkart-style) */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    background: #fff;
+    text-align: center;
+}
+
+
+.product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+.product-card h3 {
+    color: #2874f0;
+    margin: 8px 0;
+}
+
+.price {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+@media (max-width: 900px) {
+    #productContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #productContainer {
+        grid-template-columns: 1fr;
+    }
+}
+

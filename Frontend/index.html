@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecommerce Product API Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Ecommerce Product API Demo</h1>
+
+<!-- Row: Add / Get -->
+<div class="form-row">
+
+    <!-- Add Product -->
+    <section class="card">
+        <h2>Add Product</h2>
+        <input type="text" id="pname" placeholder="Product Name">
+        <input type="number" id="pprice" placeholder="Price">
+        <textarea id="pdescription" placeholder="Description"></textarea>
+        <input type="text" id="pimage" placeholder="Image URL">
+        <button onclick="addProduct()">Add Product</button>
+    </section>
+
+    <!-- Get by ID -->
+    <section class="card">
+        <h2>Get Product by ID</h2>
+        <input type="number" id="pid" placeholder="Product ID">
+        <button onclick="getProductById()">Search</button>
+    </section>
+
+    <!-- Get by Name -->
+    <section class="card">
+        <h2>Get Product by Name</h2>
+        <input type="text" id="searchName" placeholder="Product Name">
+        <button onclick="getProductByName()">Search</button>
+    </section>
+
+</div>
+
+<!-- View All -->
+<div class="center">
+    <button class="secondary" onclick="getAllProducts()">View All Products</button>
+</div>
+
+<!-- Response -->
+<section class="card response-card">
+    <h2>Products</h2>
+    <div id="productContainer"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
