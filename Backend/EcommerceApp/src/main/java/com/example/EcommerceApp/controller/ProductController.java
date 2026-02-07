@@ -8,11 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import com.example.EcommerceApp.model.Product;
 import com.example.EcommerceApp.service.ProductService;
 
-@CrossOrigin(
-	    origins = "*",
-	    allowedHeaders = "*",
-	    methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS}
-	)
 @RestController
 @RequestMapping("/products")
 public class ProductController {
