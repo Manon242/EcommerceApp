@@ -9,7 +9,7 @@ import com.example.EcommerceApp.model.Product;
 import com.example.EcommerceApp.service.ProductService;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/api/products")
 public class ProductController {
 
     @Autowired
