@@ -48,13 +48,14 @@ public class SecurityConfig {
         ));
         
         // Allow all headers (or specify needed ones)
-        config.setAllowedHeaders(Arrays.asList(
-            "Authorization",
-            "Content-Type",
-            "Accept",
-            "X-Requested-With",
-            "Cache-Control"
-        ));
+//        config.setAllowedHeaders(Arrays.asList(
+//            "Authorization",
+//            "Content-Type",
+//            "Accept",
+//            "X-Requested-With",
+//            "Cache-Control"
+//        ));
+        config.setAllowedHeaders(List.of("*"));
         
         // IMPORTANT: Set to true for cookies/auth headers
         config.setAllowCredentials(true);
@@ -74,8 +75,8 @@ public class SecurityConfig {
     }
     
     // Optional: Add a CorsFilter bean for better control
-    @Bean
-    public CorsFilter corsFilter() {
-        return new CorsFilter(corsConfigurationSource());
-    }
+//    @Bean
+//    public CorsFilter corsFilter() {
+//        return new CorsFilter(corsConfigurationSource());
+//    }
 }
