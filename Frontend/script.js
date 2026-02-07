@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://my-ecommerce-backend.onrender.com/products";
+const API_BASE_URL = "https://my-ecommerce-backend.onrender.com/api/products";
 
 // Change this when backend is deployed
 
