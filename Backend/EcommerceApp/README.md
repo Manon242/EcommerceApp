@@ -1,28 +1,28 @@
 # Ecommerce Product Management API
 
-This project is a simple Spring Boot REST API created to manage products in an eCommerce application.
-It provides APIs to add products and retrieve product details in different ways.
-The application uses in-memory storage (ArrayList) and does not include any database.
+- This project is a simple Spring Boot REST API created to manage products in an eCommerce application.
+- It provides APIs to add products and retrieve product details in different ways.
+- The application uses in-memory storage (ArrayList) and does not include any database.
 
 ## Features
 
--Add product
--Get product by ID
--Get product by product name
--Get all products
--Basic validation
--Duplicate product name checking
--CORS enabled for frontend connection
+- Add product
+- Get product by ID
+- Get product by product name
+- Get all products
+- Basic validation
+- Duplicate product name checking
+- CORS enabled for frontend connection
 
 
 
 ## Technologies Used
 
--Java
--Spring Boot
--Spring Web
--Spring Security
--Maven
+- Java
+- Boot
+- Spring Web
+- Security
+- Maven
 
 
 
@@ -42,7 +42,7 @@ com.example.EcommerceApp
 
 ## CORS & Security Configuration
 
-This project uses **Spring Security** with a custom CORS configuration.
+- This project uses **Spring Security** with a custom CORS configuration.
 
 CORS is enabled to allow frontend access from:
 
@@ -52,8 +52,8 @@ CORS is enabled to allow frontend access from:
 - https://ecommerce-app-git-main-manonmani.vercel.app
 - https://ecommerce-app-manonmani.vercel.app
 
-All `/products/**` endpoints are publicly accessible.
-CSRF protection is disabled for simplicity since this is a REST API.
+- All `/products/**` endpoints are publicly accessible.
+- CSRF protection is disabled for simplicity since this is a REST API.
 
 
 ## API Details
@@ -71,7 +71,7 @@ json
   "imageUrl": "https://example.com/laptop.jpg"
 }
 
-Success Response (201 CREATED)
+Success Response (201 CREATED):
 {
   "id": 1,
   "name": "Laptop",
@@ -80,18 +80,18 @@ Success Response (201 CREATED)
   "imageUrl": "https://example.com/laptop.jpg"
 }
 
-Error Responses (400 BAD REQUEST)
+Error Responses (400 BAD REQUEST:
 
--Product name is required
--Price must be greater than zero
--Product already exists
+- Product name is required
+- Price must be greater than zero
+- Product already exists
 
 ### 2. Get Product by ID
 
 Method: GET
 URL: `/products/{id}`
 
-Success Response(200 OK)
+Success Response(200 OK):
 
 {
   "id": 1,
@@ -101,19 +101,19 @@ Success Response(200 OK)
   "imageUrl": "https://example.com/laptop.jpg"
 }
 
-Error Response(404 NOT FOUND)
-   -Product not found
-   -Price must be greater than zero
-   -Product already exists
+Error Response(404 NOT FOUND):
+- Product not found
+- Price must be greater than zero
+- Product already exists
 
-### Error responses are returned as plain text, not JSON.
+- Error responses are returned as plain text, not JSON.
 
 ### 3. Get Product by Product Name
 
 Method: GET
 URL: `/products/name/{name}`
 
- Success Response(200 OK)
+ Success Response(200 OK):
 
 {
   "id": 1,
@@ -123,8 +123,8 @@ URL: `/products/name/{name}`
   "imageUrl": "https://example.com/laptop.jpg"
 }
 
-Error Response(404 NOT FOUND)
-    -Product not found
+Error Response(404 NOT FOUND):
+- Product not found
 
 
 ## 4. Get All Products
@@ -132,7 +132,7 @@ Error Response(404 NOT FOUND)
 Method: GET
 URL: `/products`
 
-Success Response – Products Available (200 OK)
+Success Response – Products Available (200 OK):
 [
   {
     "id": 1,
@@ -150,28 +150,23 @@ Success Response – Products Available (200 OK)
   }
 ]
 
-Success Response – No Products Available (200 OK)
+Success Response – No Products Available (200 OK):
 []
 
- -If no products exist, an empty list is returned.
- -This API never returns an error in normal conditions.
+- If no products exist, an empty list is returned.
+- This API never returns an error in normal conditions.
 
 ## Validations
 
--Product name should not be null or empty
-
--Product price must be greater than zero
-
--Same product name cannot be added again
+- Product name should not be null or empty
+- Product price must be greater than zero
+- Same product name cannot be added again
 
 ## Conclusion
 
 This project demonstrates a basic Spring Boot REST API with:
 
--Clean controller–service separation
-
--Proper validations
-
--REST-style endpoints
-
--Frontend-ready CORS support
+- Clean controller–service separation
+- Proper validations
+- REST-style endpoints
+- Frontend-ready CORS support

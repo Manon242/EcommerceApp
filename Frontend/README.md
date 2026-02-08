@@ -32,7 +32,7 @@ https://my-ecommerce-backend-gqci.onrender.com/products
 
 
 ## Live Application
-https://ecommerce-app-manonmani.vercel.app
+https://ecommerce-app-three-ruby.vercel.app/
 
 ## Notes
 - Backend uses in-memory data storage (ArrayList)
