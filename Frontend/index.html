@@ -13,28 +13,39 @@
 <div class="form-row">
 
     <!-- Add Product -->
-    <section class="card">
-        <h2>Add Product</h2>
-        <input type="text" id="pname" placeholder="Product Name">
-        <input type="number" id="pprice" placeholder="Price">
-        <textarea id="pdescription" placeholder="Description"></textarea>
-        <input type="text" id="pimage" placeholder="Image URL">
-        <button onclick="addProduct()">Add Product</button>
-    </section>
+     <div class="action-box">
+    <h2>Add Product</h2>
+
+    <input id="pname" placeholder="Product name">
+    <input id="pprice" placeholder="Price">
+    <textarea id="pdescription" placeholder="Description"></textarea>
+    <input id="pimage" placeholder="Image URL">
+
+    <button class="btn" onclick="addProduct()">Add Product</button>
+</div>
+
 
     <!-- Get by ID -->
-    <section class="card">
-        <h2>Get Product by ID</h2>
-        <input type="number" id="pid" placeholder="Product ID">
-        <button onclick="getProductById()">Search</button>
-    </section>
+    <div class="action-box">
+    <h2>Get Product by ID</h2>
+
+    <div class="inline-action">
+        <input id="pid" placeholder="Enter product ID">
+        <button class="btn" onclick="getProductById()">Search</button>
+    </div>
+</div>
+
 
     <!-- Get by Name -->
-    <section class="card">
-        <h2>Get Product by Name</h2>
-        <input type="text" id="searchName" placeholder="Product Name">
-        <button onclick="getProductByName()">Search</button>
-    </section>
+    <div class="action-box">
+    <h2>Get Product by Name</h2>
+
+    <div class="inline-action">
+        <input id="searchName" placeholder="Enter product name">
+        <button class="btn" onclick="getProductByName()">Search</button>
+    </div>
+</div>
+
 
 </div>
 

@@ -14,7 +14,7 @@ public class ProductService {
 
     public Product addProduct(Product product) {
 
-        // 1️⃣ Validation
+        // 1️ Validation
         if (product.getName() == null || product.getName().isBlank()) {
             throw new IllegalArgumentException("Product name is required");
         }
@@ -23,14 +23,14 @@ public class ProductService {
             throw new IllegalArgumentException("Price must be greater than zero");
         }
 
-        // 2️⃣ Check duplicate (ONLY READ, NO MODIFY)
+        // 2️ Check duplicate 
         for (Product existing : products) {
             if (existing.getName().equalsIgnoreCase(product.getName())) {
                 throw new IllegalArgumentException("Product already exists");
             }
         }
 
-        // 3️⃣ Modify list ONLY AFTER LOOP
+        // 3️ Modify list ONLY AFTER LOOP
         product.setId(currentId++);
         products.add(product);
 
@@ -63,7 +63,7 @@ public class ProductService {
         return null;
     }
 
-    // Get all products (BONUS)
+    // Get all products 
     public ArrayList<Product> getAllProducts() {
         return products;
     }

@@ -6,22 +6,23 @@ The application uses in-memory storage (ArrayList) and does not include any data
 
 ## Features
 
-- Add product
-- Get product by ID
-- Get product by product name
-- Get all products
-- Basic validation
-- Duplicate product name checking
-- CORS enabled for frontend connection
+-Add product
+-Get product by ID
+-Get product by product name
+-Get all products
+-Basic validation
+-Duplicate product name checking
+-CORS enabled for frontend connection
 
 
 
 ## Technologies Used
 
-- Java
-- Spring Boot
-- Spring Web
-- Maven
+-Java
+-Spring Boot
+-Spring Web
+-Spring Security
+-Maven
 
 
 
@@ -39,11 +40,21 @@ com.example.EcommerceApp
 
 
 
-##CORS Configuration
+## CORS & Security Configuration
+
+This project uses **Spring Security** with a custom CORS configuration.
 
 CORS is enabled to allow frontend access from:
 
-http://127.0.0.1:5500
+- http://127.0.0.1:5500
+- http://localhost:3000
+- https://ecommerce-app-three-ruby.vercel.app
+- https://ecommerce-app-git-main-manonmani.vercel.app
+- https://ecommerce-app-manonmani.vercel.app
+
+All `/products/**` endpoints are publicly accessible.
+CSRF protection is disabled for simplicity since this is a REST API.
+
 
 ## API Details
 
@@ -70,11 +81,10 @@ Success Response (201 CREATED)
 }
 
 Error Responses (400 BAD REQUEST)
-   -Product name is required
 
-   -Price must be greater than zero
-
-   -Product already exists
+-Product name is required
+-Price must be greater than zero
+-Product already exists
 
 ### 2. Get Product by ID
 
@@ -93,6 +103,8 @@ Success Response(200 OK)
 
 Error Response(404 NOT FOUND)
    -Product not found
+   -Price must be greater than zero
+   -Product already exists
 
 ### Error responses are returned as plain text, not JSON.
 
