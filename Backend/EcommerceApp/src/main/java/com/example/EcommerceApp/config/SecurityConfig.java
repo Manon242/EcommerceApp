@@ -39,6 +39,11 @@ public class SecurityConfig {
             "https://ecommerce-app-three-ruby.vercel.app",
             "https://ecommerce-app-git-main-manonmani.vercel.app",
             "https://my-ecommerce-backend-gqci.onrender.com/products",
+            "https://my-ecommerce-backend-gqci.onrender.com",
+            
+           " https://ecommerce-app-manonmani.vercel.app",
+
+
             "http://localhost:3000",
             "http://127.0.0.1:5500"
         ));
